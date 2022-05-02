@@ -21,7 +21,7 @@ export const Login = () => {
       if (res.status !== 200) {
         throw new Error("Error logging in");
       }
-      handleAuth(true);
+      setIsAuth(true);
       navigate(-2, { replace: true });
     } catch (er) {
       alert(er.message);
